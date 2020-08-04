@@ -55,6 +55,6 @@ public class UploadController {
 	@GetMapping("/{company_id}/{from}/{ to}/{period}")
 	public Iterable<Double> getCompanyStockPrice(@PathVariable Long company_id,@PathVariable  Date from,@PathVariable  Date to,@PathVariable  int period){
 		
-		return null;
+		return service.getCompanyStockPrice(company_id,from,to,period);
 	}
 }
